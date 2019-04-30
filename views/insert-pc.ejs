@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>In-bounding Schedule</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="/static/assets/third-party/semantic.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="ui container">
+		<form class="ui padded form" onsubmit="return;">
+			<input type="hidden" name="title" value="<%= query.title %>" />
+			<input type="hidden" name="startDate" value="<%= query.startDate %>" />
+			<input type="hidden" name="url" value="<%= query.url %>" />
+			<input type="hidden" name="location" value="<%= query.location %>" />
+			<input type="hidden" name="description" value="<%= query.description %>" />
+		</form>
+
+		<div class="ui basic modal">
+			<div class="ui icon large header">
+				<i class="calendar check icon"></i>
+				Add Schedule
+			</div>
+			<div class="content">
+				<h3 class="ui header inverted dividing">Confirm the Schedule URL.</h3>
+				<table class="ui definition inverted table">
+					<tbody>
+						<tr>
+							<td class="collapsing">Title</td>
+							<td><%= query.title %></td>
+						</tr>
+						<tr>
+							<td class="collapsing">Date</td>
+							<td><%= query.startDate %></td>
+						</tr>
+						<% if(query.url != ""){ %>
+							<tr>
+								<td class="collapsing">URL</td>
+								<td><%= query.url %></td>
+							</tr>
+						<% } %>
+						<% if(query.location != ""){ %>
+							<tr>
+								<td class="collapsing">Location</td>
+								<td><%= query.location %></td>
+							</tr>
+						<% } %>
+						<% if(query.description != ""){ %>
+							<tr>
+								<td class="collapsing">Description</td>
+								<td id="description"><%= query.description %></td>
+							</tr>
+						<% } %>
+					</tbody>
+				</table>
+			</div>
+			<div class="actions">
+				<div class="ui red basic cancel inverted button">
+					<i class="remove icon"></i>
+					Close without Adding the schedule
+				</div>
+				<div class="ui green ok inverted button">
+					<i class="checkmark icon"></i>
+					Add Schedule
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script src="/static/assets/third-party/semantic.min.js"></script>
+	<script src="/static/assets/third-party/jquery.serializejson.min.js"></script>
+	<script src="/static/assets/js/insert-pc.js"></script>
+</body>
+</html>

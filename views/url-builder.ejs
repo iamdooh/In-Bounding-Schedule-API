@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>In-bounding Schedule</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script src="/static/assets/third-party/semantic.min.js"></script>
+	<script src="/static/assets/third-party/jquery.serializejson.min.js"></script>
+	<script src="/static/assets/third-party/jquery.datetimepicker.full.min.js"></script>
+	<script src="/static/assets/third-party/clipboard.min.js"></script>
+	<script src="/static/assets/js/url-builder.js"></script>
+
+	<link href="/static/assets/third-party/semantic.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/third-party/jquery.datetimepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="title">
+		<div class="ui basic segment container">
+			<h1 class="ui blue header inverted">
+				Schedule URL Generator
+			</h1>
+		</div>
+	</div>
+
+	<div class="ui container">
+		<div class="ui big basic segment">
+			<form class="ui padded inverted form" onsubmit="return false;" id="builder-form" autocomplete="off">
+				<h3 class="ui dividing inverted header">Please fill out the required fields in the form below</h3>
+				<div class="field required">
+					<label>Title</label>
+					<input type="text" name="title" placeholder="" />
+				</div>
+				<div class="field required">
+					<label>Schedule</label>
+					<input type="text" name="startDate" placeholder="MM/dd/yyyy HH:mm" readonly="readonly" />
+				</div>
+				<div class="field">
+					<label>URL</label>
+					<input type="text" name="url" />
+				</div>
+				<div class="field">
+					<label>Location</label>
+					<input type="text" name="location" />
+				</div>
+				<div class="field">
+					<label>Description</label>
+					<textarea rows="3" name="description"></textarea>
+				</div>
+
+				<div class="ui divider"></div>
+
+				<div class="ui right aligned container">
+					<button class="ui submit blue inverted button" type="submit" data-type="url">Generate URL</button>
+					<button class="ui submit blue inverted button" type="submit" data-type="tag">Generate Embed Button</button>
+					<button class="ui submit blue inverted button" type="submit" data-type="qrcode">Generate QR Code</button>
+					<button class="ui submit blue inverted button" type="submit" data-type="shortUrl">Generate Short URL</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="ui hidden divider"></div>
+
+		<div class="ui big basic segment">
+			<h3 class="ui dividing inverted header">
+				Copy & Paste the generated schedule to your App or Website
+			</h3>
+			<div class="ui small inverted form" id="display">
+				Not generated!
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">&copy;2018 Blizzard Entertainment, INC.</div>
+</body>
+</html>

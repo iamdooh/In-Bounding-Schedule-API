@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>In-bounding Schedule</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="/static/assets/third-party/semantic.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/third-party/jquery.datetimepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/assets/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="ui basic center aligned segment container">
+		<h1 class="ui blue header inverted">
+			APP
+		</h1>
+	</div>
+
+	<div class="iphone-frame">
+		<div class="inner-frame">
+			<div class="title">
+				<h4 class="ui blue header inverted">
+					SCHEDULES
+				</h4>
+			</div>
+
+			<div id="wrapper">
+				<div id="scroller">
+					<div class="ui container">
+						<div class="ui basic segment">
+							<div class="ui relaxed divided inverted list">
+								<% if(schedules.length == 0){ %>
+									No Schedule!
+								<% } else { %>
+									<% for(var i=0; i < schedules.length; i++){ %>
+										<div class="item" data-title="<%= schedules[i].title %>" data-start-date="<%= moment(schedules[i].startDate).format('dddd, MMM-DD-YYYY') %>" data-url="<%= schedules[i].url %>" data-location="<%= schedules[i].location %>" data-description="<%= schedules[i].description %>">
+											<div class="content">
+												<h4 class="ui inverted header">
+													<i class="big inverted icon middle aligned bell"></i>
+													<div class="content">
+														<%= schedules[i].title %>
+														<div class="sub header">
+															<%= moment(schedules[i].startDate).format('dddd, MMM-DD-YYYY') %>
+														</div>
+													</div>
+												</h4>
+											</div>
+											<div class="right floated content">
+												<div class="ui remove basic inverted red tiny button" data-id="<%= schedules[i].id %>">
+													Delete
+												</div>
+											</div>
+										</div>
+									<% } %>
+								<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui dimmer" id="dimmer">
+				<div class="ui loader"></div>
+			</div>
+		</div>
+
+		<div class="inner-frame ui transition hidden" id="view">
+			<div class="title">
+				<h4 class="ui blue header inverted" id="data-title"></h4>
+			</div>
+
+			<div id="view-wrapper">
+				<div id="view-scroller">
+					<div class="ui container">
+						<div class="ui basic segment">
+							<h4 class="ui inverted header">
+								<div class="sub header">Date:</div>
+								<div id="data-start-date"></div>
+							</h4>
+
+							<h4 class="ui inverted header">
+								<div class="sub header">URL:</div>
+								<div id="data-start-date">
+									<a target="_blank" id="data-url"></a>
+								</div>
+							</h4>
+
+							<h4 class="ui inverted header">
+								<div class="content">
+									<div class="sub header">Location:</div>
+									<div id="data-location"></div>
+
+									<div class="ui divider"></div>
+
+									<div class="sub header" id="map"></div>
+								</div>
+							</h4>
+
+							<h4 class="ui inverted header">
+								<div class="sub header">Description:</div>
+								<div id="data-description"></div>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script src="/static/assets/third-party/semantic.min.js"></script>
+	<script src="/static/assets/third-party/jquery.serializejson.min.js"></script>
+	<script src="/static/assets/third-party/iscroll.js"></script>
+	<script src="/static/assets/js/list.js"></script>
+</body>
+</html>

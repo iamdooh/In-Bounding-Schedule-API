@@ -1,0 +1,158 @@
+html,
+body { height: 100%; }
+
+body {
+    background: #0d1521;
+    font-family: 'Blizzard';
+    color: #989898;
+}
+
+body > .ui.container { padding-top: 50px; }
+
+@font-face {
+  font-family: 'Icons';
+  src: url("/static/assets/fonts/icons.eot");
+  src: url("/static/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/icons.woff2") format('woff2'), url("/static/assets/fonts/icons.woff") format('woff'), url("/static/assets/fonts/icons.ttf") format('truetype'), url("/static/assets/fonts/icons.svg#icons") format('svg');
+}
+
+@font-face {
+  font-family: 'outline-icons';
+  src: url("/static/assets/fonts/outline-icons.eot");
+  src: url("/static/assets/fonts/outline-icons.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/outline-icons.woff2") format('woff2'), url("/static/assets/fonts/outline-icons.woff") format('woff'), url("/static/assets/fonts/outline-icons.ttf") format('truetype'), url("/static/assets/fonts/outline-icons.svg#icons") format('svg');
+}
+
+@font-face {
+  font-family: 'brand-icons';
+  src: url("/static/assets/fonts/brand-icons.eot");
+  src: url("/static/assets/fonts/brand-icons.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/brand-icons.woff2") format('woff2'), url("/static/assets/fonts/brand-icons.woff") format('woff'), url("/static/assets/fonts/brand-icons.ttf") format('truetype'), url("/static/assets/fonts/brand-icons.svg#icons") format('svg');
+}
+
+@font-face {
+  font-family: 'BlizzardLight';
+  src: url("/static/assets/fonts/blizzard.light.eot");
+  src: url("/static/assets/fonts/blizzard.light.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/blizzard.light.woff") format('woff'), url("/static/assets/fonts/blizzard.light.ttf") format('truetype'), url("/static/assets/fonts/blizzard.light.svg#icons") format('svg');
+}
+
+@font-face {
+  font-family: 'Blizzard';
+  src: url("/static/assets/fonts/blizzard.regular.eot");
+  src: url("/static/assets/fonts/blizzard.regular.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/blizzard.regular.woff") format('woff'), url("/static/assets/fonts/blizzard.regular.ttf") format('truetype'), url("/static/assets/fonts/blizzard.regular.svg#icons") format('svg');
+}
+
+@font-face {
+  font-family: 'BlizzardBold';
+  src: url("/static/assets/fonts/blizzard.bold.eot");
+  src: url("/static/assets/fonts/blizzard.bold.eot?#iefix") format('embedded-opentype'), url("/static/assets/fonts/blizzard.bold.woff") format('woff'), url("/static/assets/fonts/blizzard.bold.ttf") format('truetype'), url("/static/assets/fonts/blizzard.bold.svg#icons") format('svg');
+}
+
+.ui.form input:not([type]),
+.ui.form input[type=date],
+.ui.form input[type=datetime-local],
+.ui.form input[type=email],
+.ui.form input[type=file],
+.ui.form input[type=number],
+.ui.form input[type=password],
+.ui.form input[type=search],
+.ui.form input[type=tel],
+.ui.form input[type=text],
+.ui.form input[type=time],
+.ui.form input[type=url],
+.ui.header,
+.ui.button { font-family: 'Blizzard'; }
+
+.ui.inverted.form input:not([type]),
+.ui.inverted.form input[type=date],
+.ui.inverted.form input[type=datetime-local],
+.ui.inverted.form input[type=email],
+.ui.inverted.form input[type=file],
+.ui.inverted.form input[type=number],
+.ui.inverted.form input[type=password],
+.ui.inverted.form input[type=search],
+.ui.inverted.form input[type=tel],
+.ui.inverted.form input[type=text],
+.ui.inverted.form input[type=time],
+.ui.inverted.form input[type=url] { background-color: #2f2f2f!important; color: #fff; }
+
+form.ui.inverted.form textarea { border-color: rgba(255,255,255,.1); background-color: #2f2f2f!important; color: #fff; }
+form.ui.inverted.form textarea:focus {
+	color: #fff;
+	border-color: rgba(255,255,255,.1);
+	border-radius: 0.28571429rem;
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+	box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+	-webkit-appearance: none;
+}
+
+.ui.inverted.form .field .prompt.label { background-color: #242424!important; }
+
+.ui.inverted.table tr td { word-break: break-all; }
+
+.title { padding: 25px 0; background-color: #364a6a; border-bottom: 2px solid #50688b; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
+.title .ui.inverted.blue.header { color: #9cc3ff!important; }
+.footer { margin-top: 50px; padding: 20px; text-align: center; font-size: 11px; }
+
+#display iframe { display: block; margin-bottom: 20px; }
+#display .ui.container textarea { font-family: Consolas,liberation mono,Menlo,Courier,monospace; resize: none; border-radius: 0!important; border-color: #555!important; }
+
+.iphone-frame { position: relative; width: 400px; height: 810px; margin: 0 auto; background: url('/static/assets/images/iphone-frame.png') center top no-repeat; background-size: cover; box-sizing: border-box; }
+.iphone-frame .title { position: absolute; top: 0; width: 100%; padding: 0; text-align: center; border-width: 1px; background-color: #073881; text-shadow: none; }
+.iphone-frame .title:after { content: "\f0c9"; position: absolute; right: 10px; top: 12px; font-family: Icons; color: #fff; font-size: 18px; }
+.iphone-frame .title .ui.inverted.blue.header { margin: 0; line-height: 40px; font-family: 'BlizzardBold'; color: #fff!important; }
+.iphone-frame .inner-frame { position: absolute; left: 26px; top: 97px; width: 349px; height: 616px; background-color: #0d1521; overflow: hidden; }
+.iphone-frame .inner-frame .item { position: relative; }
+.iphone-frame .inner-frame .item > .content { margin-right: 80px; padding: 10px 0; }
+.iphone-frame .inner-frame .item > .content .sub.header { color: rgba(255,255,255,.6); }
+.iphone-frame .inner-frame .item > .content.right.floated { position: absolute; right: 0; top: 50%; margin: 0; margin-top: -25px; }
+.iphone-frame .inner-frame .embedded-button { position: relative; width: 100%; height: 100%; background: url('/static/assets/images/image-embedded-button.jpg') no-repeat; background-size: cover; border: 1px solid rgba(255,255,255,.5); }
+.iphone-frame .inner-frame .embedded-button .button { position: absolute; bottom: 94px; left: 50%; margin-left: -80px; box-shadow: 0 0 10px rgba(0,0,0,.5); }
+
+
+#view { z-index: 2000; }
+#view .title:after { content: "\f00d"; }
+#view .title .ui.inverted.blue.header { width: 86%; margin: 0 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+#confirm { z-index: 2000; }
+#confirm .actions .button { margin-bottom: 10px; }
+
+#wrapper,
+#confirm-wrapper,
+#view-wrapper {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 41px;
+	bottom: 0;
+	width: 100%;
+	background-color: #0d1521; 
+	overflow: hidden;
+}
+
+#wrapper #scroller,
+#confirm-wrapper #confirm-scroller,
+#view-wrapper #view-scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+.example { position: relative; text-align: center; box-sizing: border-box; }
+.example .button { position: absolute; top: 390px; left: 50%; margin-left: -80px; box-shadow: 0 0 10px rgba(0,0,0,.5); }
+.example-web { width: 900px; height: 718px; margin: 0 auto; padding-top: 100px; background: url('/static/assets/images/image-web.png') center top no-repeat; }
+.example-web-login { width: 400px; height: 319px; margin: 0 auto; padding-top: 100px; background: url('/static/assets/images/image-web-login.png') center top no-repeat; }
