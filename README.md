@@ -6,6 +6,11 @@ Hackathon 2018
 npm install
 ```
 
+## If nodemon is not installed
+```bash
+npm install -g nodemon
+```
+
 ## Running the server
 ```bash
 npm start
